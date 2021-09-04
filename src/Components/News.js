@@ -75,7 +75,7 @@ const News =(props)=> {
   //}
  const fetchMoreData= async ()=>{
    setPage(page+1)
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apikey=${props.apiKey}&page=1&pageSize=${props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apikey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
     // this.setState({ loading: true });
     let data = await fetch(url);
     let parseddata = await data.json();
@@ -88,7 +88,7 @@ const News =(props)=> {
  
     return (
       <>
-        <h2 style={{ margin: "35px" }} className="text-center">
+        <h2 style={{ margin: "35px",marginTop:"90px" }} className="text-center">
           Top Headlines
         </h2>
         {/* {this.state.loading&&<Spinner></Spinner>} */}
