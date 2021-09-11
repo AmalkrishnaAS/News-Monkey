@@ -17,7 +17,7 @@ const App=()=>{
   let apiKey=process.env.REACT_APP_NEWS_API
   const [progress, setProgress] = useState(0)
   const setprogress=(progress)=>{
-    setprogress(progress)
+    setProgress(progress)
   }
   
   
